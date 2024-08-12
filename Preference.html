@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Partner Preference </title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" 
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <Style>
+         body {
+            margin: 0;
+            padding: 0;
+            background-color: #5A0069;
+            color: white;
+        }
+        .div1{
+            margin-left: 20px;
+            margin-top: 40px;
+        }
+        .div2{
+            border-radius:50px; 
+            margin-top: 60px;
+            width: auto;
+            padding-left: 70px;
+            padding-right: 70px;
+            padding-bottom: 70px;
+        }
+        .tag-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 5px;
+        }
+        .tag {
+            background-color: black;
+            color: #fff;
+            padding: 5px 10px;
+            border-radius: 15px;
+            margin-left: 10px;
+        }
+        .range-slider {
+  height: 5px;
+  position: relative;
+  background-color: #e1e9f6;
+  border-radius: 2px;
+}
+.range-selected {
+  height: 100%;
+  left: 30%;
+  right: 30%;
+  position: absolute;
+  border-radius: 5px;
+  background-color: black;
+}
+
+.range-input {
+  position: relative;
+}
+.range-input input {
+  position: absolute;
+  width: 100%;
+  height: 5px;
+  top: -7px;
+  background: none;
+  pointer-events: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+.range-input input::-webkit-slider-thumb {
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  border: 3px solid black;
+  background-color: #fff;
+  pointer-events: auto;
+  -webkit-appearance: none;
+}
+.range-input input::-moz-range-thumb {
+  height: 15px;
+  width: 15px;
+  border-radius: 50%;
+  border: 3px solid #1b53c0;
+  background-color: #fff;
+  pointer-events: auto;
+  -moz-appearance: none;
+}
+
+.range-price {
+    margin: 30px 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .range-price label {
+    margin-right: 5px;
+  }
+  .range-price input {
+    width: 40px;
+    padding: 5px;
+  }
+  .range-price input:first-of-type {
+    margin-right: 15px;
+  }
+    </Style>
+
+</head>
+<body>
+    
+    <div class="div1">
+        <img src="icons/search.png" alt="" height="70px" width="70px"> 
+        <h1 style="text-align: center; margin-top: -60px;">Privacy & Settings</h1>
+    </div>
+    <div class="card div2">
+        <div class="card-body">
+          <h5 class="card-title" style="text-align: center;">Partner Preference </h5>
+          <label for="customRange1" class="form-label">Age</label><p class="card-text" style="text-align: end;margin-top: -35px;">18-35</p>
+            <input type="range" class="form-range" min="18" max="35" value="18" id="customRange1">
+            <label class="form-label">Gender</label>
+            <select class="form-select form-select-lg mb-3" aria-label="Large select example">
+                <option selected>Value</option>
+                <option value="1">Male</option>
+                <option value="2">Female</option>
+                <option value="3">other</option>
+            </select>
+            <div class="mb-3">
+                <label class="form-label">Locations</label>
+                <div class="tag-container">
+                    <span class="tag">Kochi <i class="bi bi-x"></i></span>
+                    <span class="tag">Kollam <i class="bi bi-x"></i></span>
+                    <span class="tag">Aluva <i class="bi bi-x"></i></span>
+                </div>
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">Interests & Hobbies</label>
+                <div class="tag-container">
+                    <span class="tag">Yoga <i class="bi bi-x"></i></span>
+                    <span class="tag">Jazz <i class="bi bi-x"></i></span>
+                    <span class="tag">Reading <i class="bi bi-x"></i></span>
+                </div>
+            </div>
+            <label class="form-label">Relationship Goals</label>
+            <select class="form-select form-select-lg mb-3" aria-label="Large select example">
+                <option selected>Value</option>
+                <option value="1">Casual Dating</option>
+                <option value="2">Serious Relationship</option>
+                <option value="3">Marriage</option>
+            </select>
+            <label class="form-label">Education Level</label>
+            <select class="form-select form-select-lg mb-3" aria-label="Large select example">
+                <option selected>Value</option>
+                <option value="1">High School</option>
+                <option value="2">Bachelor's Degree</option>
+                <option value="3">Master's Degree</option>
+            </select>
+            <div class="mb-3">
+                <label for="heightRange" class="form-label">Height</label><p class="card-text" style="text-align: end;margin-top: -35px;">cm100-200</p>
+                <input type="range" class="form-range" min="100" max="220" id="heightRange">
+            </div>
+
+            <div class="mb-3">
+                <label for="weightRange" class="form-label">Weight</label><p class="card-text" style="text-align: end;margin-top: -35px;">kg40-150</p>
+                <input type="range" class="form-range" min="40" max="150" id="weightRange">
+            </div>
+
+            <div class="mb-3">
+                <label for="lifestyleChoices" class="form-label">Lifestyle Choices</label>
+                <select class="form-select" id="lifestyleChoices">
+                    <option selected>Value</option>
+                    <option value="1">Non-Smoker</option>
+                    <option value="2">Smoker</option>
+                    <option value="3">Vegan</option>
+                </select>
+            </div>
+
+            <div class="mb-3">
+                <label for="religion" class="form-label">Religion</label>
+                <select class="form-select" id="religion">
+                    <option selected>Value</option>
+                    <option value="1">Christianity</option>
+                    <option value="2">Islam</option>
+                    <option value="3">Hinduism</option>
+                </select>
+            </div>
+
+            <div class="mb-3">
+                <label for="occupation" class="form-label">Occupation</label>
+                <select class="form-select" id="occupation">
+                    <option selected>Value</option>
+                    <option value="1">Engineer</option>
+                    <option value="2">Doctor</option>
+                    <option value="3">Teacher</option>
+                </select>
+            </div>
+        </div> 
+    </div>
+      
+
+
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" 
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    
+</body>
+</html>
